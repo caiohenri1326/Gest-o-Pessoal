@@ -1,26 +1,80 @@
 :root{
+
     --background-selecionado:#1B3029;
+
     --cards-body:#1A1D24;
+
 }
+
+
+
+
 
 
 
 *{
+
     margin: 0;
+
     padding: 0;
-    overflow: hidden;
+
     font-family: 'Plus Jakarta Sans', 'Inter', sans-serif;
+
     letter-spacing: -0.02em;
+
 }
+
 body{
+
     background-color: rgb(17, 16, 16);
+
+}
+
+::-webkit-scrollbar{
+    display: none;
+}
+
+/*.d-flex{
+    width: 100vh;
+    height: 100vh;
+}
+.d-flex h5{
+    padding: 20px;
+    font-size: 20px;
+}
+.d-flex h2{
+    margin-top: 7%;
+    margin-left: 20px;
+    position: absolute;
+}*/
+.card-body .d-flex{
+    flex-wrap: wrap !important;
+}
+.card-body h2,
+.card-body p{
+    flex: 0 0 100% !important;
+    order: 2;
+    margin-left: 0 !important;
+}
+.card-body h5{
+    font-size: 20px;
+    order: 1;
+}
+.card-body .dropdown{
+    order: 1;
+}
+#card-temp, #atual-data{
+    display: inline-block;
+    margin-top: 40px;
 }
 .flex-column{
     height: 60.6rem;
     background-color: #1A1D24;
     color: rgb(191, 193, 191);
     width: 25rem;
+
 }
+
 .nav-link{
     display: flex;
     align-items: center;
@@ -29,19 +83,25 @@ body{
     width: 30rem;
     max-width: 50rem;
     font-size: 20px;
-    color: rgb(212, 214, 212);;
-    
+    color: rgb(212, 214, 212);
 }
+
 .nav-link:hover{
+
     width: 30rem;
+
     color: white;
+
 }
+
+
 
 .nav-link:focus, .nav-link:active{
     color: green;
     outline: none;
     box-shadow: none;
 }
+
 .nav-link::before{
     content: '';
     position: absolute;
@@ -55,21 +115,26 @@ body{
     height: 0;
 }
 
+
+
 .nav-link.active::before{
     height: 5%;
     opacity: 1;
 }
+
 .nav-item{
     margin-top: 20px;
     border-radius: 20px;
     margin-left: 30px;
     width: 20rem;
 }
+
 .nav-item:hover{
     color: white;
     transition: 0.5s ease;
     background-color: var(--background-selecionado);
 }
+
 .login-container{
     margin-left: 40px;
     margin-top: 30px;
@@ -78,6 +143,7 @@ body{
     cursor: pointer;
     border-radius: 20px;
 }
+
 .login-container:hover{
     background-color: #0d4331;
     transition: 0.3s ease;
@@ -85,7 +151,13 @@ body{
 
 
 
+
+
+
+
 /*------ CARD BOAS VINDAS -----------*/
+
+
 
 .card{
     background: none;
@@ -93,14 +165,46 @@ body{
     padding-top: 30px;
     height: 20rem;
 }
+
 .card-body{
     border-radius: 20px;
     width: 63rem;
+    height: 20rem;
     color: white;
     background-color: var(--cards-body);
 }
 
+
+
 h5{
     font-weight: 600;
     font-size: 30px;
+}
+
+
+/*-------------- CARD TASKS --------------*/
+
+.card-tasks{
+    position: absolute;
+    margin-top: 3%;
+    margin-left: -4%;
+}
+.card-tasks .card-body{
+    position: relative !important;
+    padding-top: 3rem;
+}
+.card-tasks .card-title{
+    position: absolute !important;
+    top: 2rem;
+    left: 2rem;
+    margin: 0 !important;
+}
+.card-tasks .dropdown{
+    position: absolute !important;
+    top: 1rem;
+    right: 1rem;
+}
+.card-tasks #lista-tarefas-container,
+.card-tasks #mensagem-vazia{
+    margin-top: 1.5rem !important;
 }
