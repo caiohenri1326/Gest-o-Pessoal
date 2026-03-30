@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Plus+Jakarta+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>Gestão Pessoal</title>
+</head>
+<body>
+<div class="d-flex">
+    <ul class="nav flex-column">
+            <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#">
+                <i class="bi bi-columns-gap h"></i>
+                Painel
+            </a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="#">
+                <i class="bi bi-clipboard2-check"></i>
+                Minhas Tarefas
+            </a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="#">
+                <i class="bi bi-calendar-date"></i>
+                Calendario
+            </a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="#">
+                <i class="bi bi-folder2"></i>
+                Projetos
+            </a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="#">
+                <i class="bi bi-graph-up icon-dashboar"></i>
+                Análise
+            </a>
+        </li>
+
+
+        <li class="loggout-container">
+            <hr style="width: 20rem; margin-left: 30px; margin-top: 23rem;">
+            <div class="login-container">
+                <img src="" alt="">
+                <p style="margin-left: 7rem; font-size: 18px;">Nome da Pessoa</p>
+            </div>
+            <a href="#" class="nav-link" style="margin-top: 10px; margin-left: 40px;">
+            <i class="bi bi-box-arrow-right"></i>
+            Sair
+            </a>
+        </li>
+    </ul>
+
+
+<div class="card">
+    <div class="card-body">
+        <h5 class="card-title">Bem-Vindo</h5>
+        <p id="nome-perfil">Nome da Pessoa</p><p>
+        <p class="card-text">Atual,<p id="atual-data">Data Vai Aqui</p></p>
+        <p class="card-text" id="task-title">Titulo da Tarefa</p>
+    </div>
+</div>
+</div>
+
+
+<script>
+    // 1. Pega todos os links da barra lateral
+    const links = document.querySelectorAll('.nav-link');
+
+    links.forEach(link => {
+        link.addEventListener('click', function(event) {
+            // Opcional: impede o recarregamento da página se o href for "#"
+            // event.preventDefault(); 
+
+            // 2. Remove a classe 'active' de TODOS os links primeiro
+            links.forEach(item => item.classList.remove('active'));
+
+            // 3. Adiciona a classe 'active' apenas no que você acabou de clicar
+            this.classList.add('active');
+        });
+    });
+</script>
+</body>
+</html>

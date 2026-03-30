@@ -1,0 +1,106 @@
+:root{
+    --background-selecionado:#1B3029;
+    --cards-body:#1A1D24;
+}
+
+
+
+*{
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    font-family: 'Plus Jakarta Sans', 'Inter', sans-serif;
+    letter-spacing: -0.02em;
+}
+body{
+    background-color: rgb(17, 16, 16);
+}
+.flex-column{
+    height: 60.6rem;
+    background-color: #1A1D24;
+    color: rgb(191, 193, 191);
+    width: 25rem;
+}
+.nav-link{
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    padding: 15px 25px;
+    width: 30rem;
+    max-width: 50rem;
+    font-size: 20px;
+    color: rgb(212, 214, 212);;
+    
+}
+.nav-link:hover{
+    width: 30rem;
+    color: white;
+}
+
+.nav-link:focus, .nav-link:active{
+    color: green;
+    outline: none;
+    box-shadow: none;
+}
+.nav-link::before{
+    content: '';
+    position: absolute;
+    left: 0;
+    transform: translateY(-0%);
+    width: 4px;
+    background-color: rgb(16, 217, 16);
+    border-radius: 0 4px 4px 0;
+    transition: height 0.3s ease;
+    opacity: 0;
+    height: 0;
+}
+
+.nav-link.active::before{
+    height: 5%;
+    opacity: 1;
+}
+.nav-item{
+    margin-top: 20px;
+    border-radius: 20px;
+    margin-left: 30px;
+    width: 20rem;
+}
+.nav-item:hover{
+    color: white;
+    transition: 0.5s ease;
+    background-color: var(--background-selecionado);
+}
+.login-container{
+    margin-left: 40px;
+    margin-top: 30px;
+    width: 20rem;
+    background-color: var(--background-selecionado);
+    cursor: pointer;
+    border-radius: 20px;
+}
+.login-container:hover{
+    background-color: #0d4331;
+    transition: 0.3s ease;
+}
+
+
+
+/*------ CARD BOAS VINDAS -----------*/
+
+.card{
+    background: none;
+    padding-left: 40px;
+    padding-top: 30px;
+    height: 20rem;
+}
+.card-body{
+    border-radius: 20px;
+    width: 63rem;
+    color: white;
+    background-color: var(--cards-body);
+}
+
+h5{
+    font-weight: 600;
+    font-size: 30px;
+}
