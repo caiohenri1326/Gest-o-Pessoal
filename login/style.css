@@ -1,0 +1,59 @@
+:root{
+    --botao-selecionado: #1B3029;
+    --card-body:#1A1D24;   
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    background-color: rgb(10, 10, 10);
+    font-family: 'Plus Jakarta Sans', 'Inter', sans-serif;
+    letter-spacing: -0.02em;
+}
+.form-login{
+    width: 25%;
+    height: 700px;
+    background-color: var(--card-body);
+    color: green;
+    margin-left: 40%;
+    margin-top: 5%;
+    border-radius: 15px;
+}
+.form-login button{
+    margin-top: 30px;
+}
+.container-button{
+    margin-top: 100px;
+}
+.container-form{
+    margin-top: 50px;
+}
+.container-form input{
+    width: 90%;
+    height: 50px;
+    margin-left: 20px;
+}
+.container-form input:focus{
+    outline: 2px solid rgb(4, 199, 4);
+}
+.container-form label{
+    font-size: 18px;
+    margin-left: 20px;
+}
+.form-check{
+    margin-top: 20px;
+    margin-left: 20px;
+    height: 30px;
+    cursor: pointer;
+}
+.btn-primary{
+    width: 90%;
+    margin-left: 20px;
+}
+.form-login button{
+    border: none;
+    background-color: green;
+}
+.form-login button:hover{
+    background-color: rgb(3, 88, 3);
+}
